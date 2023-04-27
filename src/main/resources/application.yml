@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximumPoolSize: 50
+      minimumIdle: 20
+      pool-name: HikariPostgresPool
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://localhost:9005/ecomplete_fixtures
+    username: ${DB_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
